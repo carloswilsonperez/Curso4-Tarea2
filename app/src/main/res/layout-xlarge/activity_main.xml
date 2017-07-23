@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMainPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrador.tarea2mapas.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <include
+        android:id="@+id/miActionbar"
+        layout="@layout/actionbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miActionbar"
+        tools:ignore="MissingConstraints,UselessLeaf"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/texto_activity_main"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline10"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clMainSecundario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="78dp">
+
+
+                <TextView
+                    android:id="@+id/tvKiyu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/title_img_kiyu"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgBtnKiyu"
+                    app:layout_constraintRight_toRightOf="@+id/imgBtnKiyu"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnKiyu"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="irKiyu"
+                    android:scaleType="centerInside"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@+id/tvKiyu"
+                    app:srcCompat="@drawable/kiyu800x600"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvTeatro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+
+                    android:layout_marginTop="8dp"
+                    android:onClick="irTeatro"
+                    android:text="@string/title_img_teatro"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgBtnTeatro"
+                    app:layout_constraintRight_toRightOf="@+id/imgBtnTeatro"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnTeatro"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="irTeatro"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTeatro"
+                    app:srcCompat="@drawable/teatro800x600"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/tvSierra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/title_igm_sierra"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgBtnSierra"
+                    app:layout_constraintRight_toRightOf="@+id/imgBtnSierra"
+                    app:layout_constraintTop_toBottomOf="@+id/imgBtnKiyu" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnSierra"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="8dp"
+                    android:onClick="irSerras"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sierras800x600"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgBtnKiyu"
+                    app:layout_constraintRight_toRightOf="@+id/imgBtnKiyu"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSierra"
+                    tools:ignore="ContentDescription"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintHorizontal_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvCufre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/title_img_cufre"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgBtnCufre"
+                    app:layout_constraintRight_toRightOf="@+id/imgBtnCufre"
+                    app:layout_constraintTop_toBottomOf="@+id/imgBtnTeatro" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnCufre"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="irCufre"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintLeft_toLeftOf="@+id/imgBtnTeatro"
+                    app:layout_constraintRight_toRightOf="@+id/imgBtnTeatro"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCufre"
+                    app:srcCompat="@drawable/cufre800x600"
+                    tools:ignore="ContentDescription,RtlHardcoded"
+                    app:layout_constraintHorizontal_bias="0.0" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5"
+                    tools:layout_editor_absoluteX="632dp"
+                    tools:layout_editor_absoluteY="93dp" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

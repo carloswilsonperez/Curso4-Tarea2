@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itMenuKiyu"
+        android:title="@string/item_menu_kiyu"
+        android:orderInCategory="100"
+        >
+    </item>
+
+    <item
+        android:id="@+id/itMenuTeatro"
+        android:title="@string/item_menu_teatro"
+        android:orderInCategory="101"
+        >
+
+    </item>
+
+    <item
+        android:id="@+id/itMenuSierras"
+        android:title="@string/item_menu_sierra"
+        android:orderInCategory="102"
+        >
+
+    </item>
+
+    <item
+        android:id="@+id/itMenuCufre"
+        android:title="@string/item_menu_cufre"
+        android:orderInCategory="102"
+        >
+
+    </item>
+</menu>

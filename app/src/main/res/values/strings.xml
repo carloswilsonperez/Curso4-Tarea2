@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tarea 2 Mapas</string>
+    <string name="title_activity_main">Tarea 2, Curso 4</string>
+    <string name="texto_activity_main">La API de Google Maps</string>
+    <string name="title_activity_mapa">Mapa</string>
+    <string name="latitud">latitud</string>
+    <string name="longitud">longitud</string>
+    <string name="nombre_mapa">nombreMapa</string>
+    <string name="title_img_kiyu">Balneario Kiyú</string>
+    <string name="title_img_teatro">Teatro Macció</string>
+    <string name="title_igm_sierra">Sierras de Mahoma</string>
+    <string name="title_img_cufre">Balneario Cufré</string>
+    <string name="item_menu_kiyu">Balneareo Kiyú</string>
+    <string name="item_menu_teatro">Teatro Macció</string>
+    <string name="item_menu_sierra">Sierras de Mahoma</string>
+    <string name="item_menu_cufre">Balneareo Cufré</string>
+</resources>
