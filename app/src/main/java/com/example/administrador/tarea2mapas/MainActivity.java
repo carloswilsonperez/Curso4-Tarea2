@@ -8,8 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView tvTituloActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionbar); // Inicializa el actionbar
         setSupportActionBar(miActionBar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // Oculta el titulo del ToolBar
 
-
+        tvTituloActionBar = (TextView) findViewById(R.id.tvTituloActionBar);
+        tvTituloActionBar.setText("Mis Mapas");
 
     }
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <include
-        android:id="@+id/miActionbar"
+        android:id="@+id/miActionbarSimple"
         layout="@layout/actionbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"

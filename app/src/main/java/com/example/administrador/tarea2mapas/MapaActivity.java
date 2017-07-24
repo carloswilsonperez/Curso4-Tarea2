@@ -3,6 +3,10 @@ package com.example.administrador.tarea2mapas;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -12,22 +16,32 @@ import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapaActivity extends FragmentActivity implements OnMapReadyCallback {
-
+public class MapaActivity extends AppCompatActivity implements OnMapReadyCallback {
+    //FragmentActivity
     private GoogleMap mMap;
     private String nombreMapa;
     private double latitud;
     private double longitud;
+    private TextView tvTituloActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapas);
+        // **** Toolbar ****
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionbarSimple);
+        setSupportActionBar(miActionBar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // Oculta el titulo del ToolBar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Habilita la flecha hacia atras
 
+        // Recupero los datos de mainactivity
         Bundle extras =  getIntent().getExtras();
         nombreMapa  = extras.getString(getResources().getString(R.string.nombre_mapa));
         latitud     = extras.getDouble(getResources().getString(R.string.latitud));
         longitud    = extras.getDouble(getResources().getString(R.string.longitud));
+
+        tvTituloActionBar = (TextView) findViewById(R.id.tvTituloActionBar);
+        tvTituloActionBar.setText(nombreMapa);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = new SupportMapFragment();
@@ -35,9 +49,6 @@ public class MapaActivity extends FragmentActivity implements OnMapReadyCallback
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.miFrameLayout, mapFragment);
         fragmentTransaction.commit();
-        
-
-
     }
 
 
