@@ -2,6 +2,7 @@ package com.example.administrador.tarea2mapas;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -21,16 +22,21 @@ public class MapaActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mapa);
+        setContentView(R.layout.activity_mapas);
 
         Bundle extras =  getIntent().getExtras();
         nombreMapa  = extras.getString(getResources().getString(R.string.nombre_mapa));
         latitud     = extras.getDouble(getResources().getString(R.string.latitud));
         longitud    = extras.getDouble(getResources().getString(R.string.longitud));
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = new SupportMapFragment();
         mapFragment.getMapAsync(this);
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.miFrameLayout, mapFragment);
+        fragmentTransaction.commit();
+        
+
 
     }
 

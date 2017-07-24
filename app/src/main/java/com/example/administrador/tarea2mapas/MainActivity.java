@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionbar); // Inicializa el actionbar
         setSupportActionBar(miActionBar);
 
+
+
     }
 
     @Override
